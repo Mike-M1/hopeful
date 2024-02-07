@@ -1,11 +1,13 @@
 <template>
   <header class="flex flex-col">
     <NavBar />
-    <div class="wrapper flex flex-col h-screen justify-between p-10 ">
-      <h1 class="bg-green-300 text-7xl">The flo</h1>
+    <div class="wrapper flex flex-col h-screen justify-between p-10 items-center bg-white">
+      <h1 class="bg-green-300 text-2xl ">The flo</h1>
       <h1>Main Section</h1>
     </div>
-    <RouterView />
+    <div class="flex flex-row justify-center">
+    <RouterView class="flex" />
+    </div>
   </header>
 
   <RouterView />
