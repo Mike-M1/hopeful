@@ -1,24 +1,28 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="Someone else made this!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <header class="flex flex-col">
+    <NavBar />
+    <div class="wrapper flex flex-col h-screen justify-between p-10 ">
+      <h1 class="bg-green-300 text-7xl">The flo</h1>
+      <h1>Main Section</h1>
     </div>
+    <RouterView />
   </header>
 
   <RouterView />
 </template>
+
+<script>
+import NavBar from './components/NavBar.vue'
+
+export default {
+  name: 'App',
+  components: {
+    NavBar
+  }
+}
+
+
+</script>
 
 <style scoped>
 header {
