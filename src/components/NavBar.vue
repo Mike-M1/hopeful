@@ -1,5 +1,6 @@
 <template>
-    <div class=" flex flex-row justify-between items-center w-4/5 p-2 text-xl m-auto bg-slate-100 ">
+    <div class=" flex flex-row justify-between items-center w-4/5 p-2 
+    text-sm m-auto  text-white">
   <router-link to="/mensProducts" class="logo">
     <h1>Mens Products</h1>
   </router-link>
@@ -27,5 +28,7 @@ export default {
 
 <style scoped>
 
-
+div > *{
+  padding: 5px;;
+}
 </style>

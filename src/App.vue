@@ -1,25 +1,52 @@
 <template>
+  <div>
   <header class="flex flex-col">
+  
+    <HeroSection />
+    
+    <SocialProof />
+    <Benefits />
+    <CTA />
+    <Plans/>
+    <Testimonials />
+    <CTA/>
+    <Footer/>
+   
     <NavBar />
-    <div class="wrapper flex flex-col h-screen justify-between p-10 items-center bg-white">
-      <h1 class="bg-green-300 text-2xl ">The flo</h1>
+    <div class="flex flex-col justify-between p-10 items-center text-white">
+      <h1 class=" text-1xl ">The flo</h1>
       <h1>Main Section</h1>
     </div>
     <div class="flex flex-row justify-center">
     <RouterView class="flex" />
+    
     </div>
   </header>
 
   <RouterView />
+  </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
+import HeroSection from './views/HeroSection.vue';
+import SocialProof from './views/SocialProof.vue';
+import Benefits from './views/Benefits.vue';
+import CTA from './views/CTA.vue';
+import Plans from './views/Plans.vue';
+import Testimonials from './views/Testimonials.vue';
+
 
 export default {
   name: 'App',
   components: {
-    NavBar
+    NavBar,
+    HeroSection,
+    SocialProof,
+    Benefits,
+    CTA,
+    Plans,
+    Testimonials
   }
 }
 
