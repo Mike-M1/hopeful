@@ -1,5 +1,5 @@
 <template>
-  <div class="h-max">
+  <div class="h-max flex flex-col">
     <video autoplay muted loop class="video" >
       <source :src="video" type="video/mp4" />
     </video>

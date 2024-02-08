@@ -1,4 +1,6 @@
 <template >
+    <div>
+    <div class="flex flex-row justify-center text-white pt-10"><h1>Athletes Attend</h1></div>
     <div class="bg-black h-[450px] flex flex-col container">
         <br/>
     <div class="gridstuff p-[55px]">
@@ -11,6 +13,7 @@
         <div class="c7"><img :src="texas" alt="" class="w-[80px] h-[50px]"></div>
         <div class="c8"><img :src="jacksonville" alt="" class="w-[80px] h-[50px]"></div>
         <div class="c9"><img :src="jacksonville" alt="" class="w-[80px] h-[50px]"></div>
+    </div>
     </div>
     </div>
 </template>

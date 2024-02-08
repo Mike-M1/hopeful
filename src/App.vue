@@ -3,13 +3,16 @@
   <header class="flex flex-col">
   
     <HeroSection />
-    
     <SocialProof />
     <Benefits />
-    <CTA />
-    <Plans/>
-    <Testimonials />
-    <CTA/>
+     <CTA />
+      <Plans/>
+      <Testimonials />
+      <CTA/>
+    <!-- 
+    
+    
+   
     <Footer/>
    
     <NavBar />
@@ -20,7 +23,7 @@
     <div class="flex flex-row justify-center">
     <RouterView class="flex" />
     
-    </div>
+    </div> -->
   </header>
 
   <RouterView />
@@ -28,7 +31,7 @@
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
+// import NavBar from './components/NavBar.vue'
 import HeroSection from './views/HeroSection.vue';
 import SocialProof from './views/SocialProof.vue';
 import Benefits from './views/Benefits.vue';
@@ -37,16 +40,18 @@ import Plans from './views/Plans.vue';
 import Testimonials from './views/Testimonials.vue';
 
 
+
 export default {
   name: 'App',
   components: {
-    NavBar,
+    // NavBar,
     HeroSection,
     SocialProof,
     Benefits,
     CTA,
     Plans,
-    Testimonials
+    Testimonials,
+    // LogIn
   }
 }
 
