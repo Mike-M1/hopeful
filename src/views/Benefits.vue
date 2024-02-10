@@ -181,16 +181,16 @@ export default {
 
 .be2{
   right:17%;
-  bottom: 30%;
+  bottom: 10%;
 }
 
 .be3{
-  top: 48%;
+  top: 61%;
   left: 33%;
 }
 
 .be4{
-  top: 30%;
+  top: 40%;
   right: 11%;
 }
 
@@ -235,42 +235,42 @@ export default {
 
 .text1l4{
   transform: rotate(90deg);
-  top: 55.5%;
+  bottom: 28.5%;
   left: 22.5%;
 }
 
 .text4{
   position: absolute;
   z-index: 3;
-  bottom: 30%;
+  bottom: 10%;
   left: 10%;
   transform: rotate(0deg);
 }
 
 .text1l3{
   transform: rotate(70deg);
-  top: 25.5%;
+  top: 35.5%;
   right: 5.25%;
 }
 
 .text3{
   position: absolute;
   z-index: 3;
-  top: 12%;
+  top: 17%;
   right: 10%;
   transform: rotate(0deg);
 }
 
 .text1l5{
   transform: rotate(0deg);
-  bottom: 31.6%;
+  bottom: 11.95%;
   left: 49%;
 }
 
 .text5{
   position: absolute;
   z-index: 3;
-  bottom: 28%;
+  bottom: 8%;
   left: 10%;
   transform: rotate(0deg);
 
