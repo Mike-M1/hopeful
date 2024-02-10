@@ -1,38 +1,48 @@
 <template>
-    <div class="bg-white">
-        <div class="testimon">
-          <h1>Testimonials 1</h1>
-          <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad sapiente architecto officia neque quis alias, a ipsa esse beatae rerum iure voluptas iste. Alias, et commodi at delectus assumenda iusto.</p>
-
-        </div>
-
-        <div class="testimon">
-
-          <h1>Testimonials 1</h1>
-          <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad sapiente architecto officia neque quis alias, a ipsa esse beatae rerum iure voluptas iste. Alias, et commodi at delectus assumenda iusto.</p>
-
-        </div>
-
-        <div class="testimon">
-          <h1>Testimonials 1</h1>
-          <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad sapiente architecto officia neque quis alias, a ipsa esse beatae rerum iure voluptas iste. Alias, et commodi at delectus assumenda iusto.</p>
-
-          
-        </div>
-
-        <div class="testimon">
-
-          <h1>Testimonials 1</h1>
-          <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad sapiente architecto officia neque quis alias, a ipsa esse beatae rerum iure voluptas iste. Alias, et commodi at delectus assumenda iusto.</p>
-
-        </div>
+    <div class="bg-white w-[340px]">
+        
+        <Swiper>
+          <SwiperSlide v-for="slide in slides">
+            <div class="testimon w-full h-[200px]">
+              <h1>{{slide.name}}</h1>
+              <p>{{slide.contenet}}</p>
+              <h1>Scroll to See More</h1>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+        
     </div>
 </template>
 
 
 <script>
+import {Swiper, SwiperSlide} from 'swiper/vue';
+import 'swiper/css';
+
 export default {
-  name: 'TestimonialsVue'
+  name: 'TestimonialsVue',
+  data() {
+    return {
+      slides: [
+        {
+          name:"Testimonial 1",
+          contenet: "Some text"
+        },
+        {
+          name:"Testimonial 2",
+          contenet: "Some text"
+        },
+        {
+          name: 'Testimonial 3',
+          contenet: "Some text"
+        }
+        ]
+    }
+  },
+  components: {
+    Swiper,
+    SwiperSlide
+  }
 }
 </script>
 

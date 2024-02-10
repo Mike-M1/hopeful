@@ -1,11 +1,12 @@
+
 <template>
     <div class="">
-        <div class="card">
+        <button class="card">
             <h1>Plan</h1>
             <h2>{{sessions}}</h2>
             <h3>{{price}}</h3>
             <button>Buy</button>
-        </div>
+        </button>
     </div>
 </template>
 
@@ -28,6 +29,13 @@ export default {
   justify-content: space-between;
     align-items: center;
     background-color: white;
+    box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.686);
+    transition: all 0.2s ease;
+    border-radius: 20%;
+}
+
+.card:active {
+  transform: scale(.75);
 }
 
 

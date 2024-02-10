@@ -1,14 +1,32 @@
 <template>
   <div>
-  <header class="flex flex-col">
-  
-    <HeroSection />
+  <header >
+    <div class="menu" @click="visible" v-if="isVisible">
+      <video autoplay muted loop class="video h-full rounded-full" >
+      <source :src="video" type="video/mp4" />
+    </video>
+    </div>
+    <div class="pos">
+      <div class="backg" v-if="isVisible2" @click="visible2">
+        <div class="menu2">
+          <ul>
+            <li><button>Home</button></li>
+            <li><button>Plans</button></li>
+            <li><button>Sign Up</button></li>
+            <li><button>Benefits</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <HeroSection class=""/>
     <SocialProof />
-    <Benefits />
-     <CTA />
-      <Plans/>
-      <Testimonials />
-      <CTA/>
+    <Benefits class="block" />
+     <CTA class="block" />
+      <Plans class="block" />
+      <Testimonials class="block" />
+      <CTA />
+
+
     <!-- 
     
     
@@ -38,6 +56,7 @@ import Benefits from './views/Benefits.vue';
 import CTA from './views/CTA.vue';
 import Plans from './views/Plans.vue';
 import Testimonials from './views/Testimonials.vue';
+import GymVid from './assets/GymVid.mp4'
 
 
 
@@ -52,72 +71,98 @@ export default {
     Plans,
     Testimonials,
     // LogIn
-  }
+  },
+  methods: {
+    visible(){
+      this.isVisible = !this.isVisible;
+      this.isVisible2 = true;
+    },
+    visible2(){
+      this.isVisible2 = !this.isVisible2;
+      this.isVisible = true;
+    }
+  },
+  data() {
+    return {
+      video: GymVid,
+      isVisible: true
+    }
+  },
+  computed: {
+    RisVisible(){
+      return this.isVisible
+    },
+    RisVisible2(){
+      return this.isVisible2
+    }
+  },
 }
 
 
 </script>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+  .menu{
+  position:fixed;
+  border-radius: 100%;
+  border: solid 1px black;
+  background-color: black;
+  object-fit: fill;
+
+  
+  width:50px;
+  height:50px;
+  top: 2%;
+  right: 4%;
+  z-index: 3;
+
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.video{
+  object-fit: fill;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: 1;
 }
 
-nav {
+.backg{
+  background-color: black;
+  position: fixed;
+  opacity: 50%;
+  width:100%;
+  height:100%;
+  z-index: 5;
+}
+
+
+
+.menu2{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 6;
+  color: white;
+
+  background-color: black;
+  opacity:100%;
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+  height:100%;
+}
+ul{
+  list-style-type: none;
+  
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+  height:100%;
+  width: 100%;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
 </style>

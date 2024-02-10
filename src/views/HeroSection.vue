@@ -1,5 +1,5 @@
 <template>
-  <div class="h-max flex flex-col">
+  <div class="video-container">
     <video autoplay muted loop class="video" >
       <source :src="video" type="video/mp4" />
     </video>
@@ -22,8 +22,19 @@ export default {
 <style>
 /* You can add styles for the video or the container div here if needed */
 
+.video-container{
+  display: block;
+ position:relative; 
+ width:100vw;
+  height:75vh;
+}
+
 .video{
-  object-fit: scale-down;
+ position:absolute;
+ top:0;
+ left:0;
+ width:100%;
+ height: 100%;
 }
 
 </style>
