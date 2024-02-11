@@ -1,6 +1,6 @@
 <template>
   <div class="video-container">
-    <video ref="videoElement" autoplay muted loop class="video">
+    <video preload="none" ref="videoElement" autoplay muted loop playsinline class="video">
       <source :src="video" type="video/mp4" />
     </video>
   </div>
