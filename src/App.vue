@@ -2,7 +2,7 @@
   <div>
   <header >
     <div class="menu" @click="visible" v-if="isVisible">
-      <video autoplay muted loop class="video h-full rounded-full" >
+      <video contorls="false" ref="menuvid" autoplay muted loop class="video h-full rounded-full" >
       <source :src="video" type="video/mp4" />
     </video>
     </div>
@@ -96,6 +96,10 @@ export default {
       return this.isVisible2
     }
   },
+  mounted() {
+    this.$refs.menuvid.load()
+    this.$refs.menuvid.play()
+  }
 }
 
 
